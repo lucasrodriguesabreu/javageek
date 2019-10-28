@@ -1,6 +1,5 @@
 package secao21;
 //Listas ligadas/LinkedList
-
 /*
 Em um vetor, os elemtnso estão um do lado do outro, enquanto em uma lista
 ligada, eles estão em lugares diferentes, porém um aposta para o outro
@@ -11,8 +10,32 @@ indicando o próximo elemento.
 public class Programa57 {
     
     public static void main(String[] args) {
+        ListaLigada lista = new ListaLigada();
         
+        System.out.println(lista);
+        lista.adicionaNoComeço("Maria");
+        System.out.println(lista);
+        lista.adicionaNoComeço("Angelina");
+        System.out.println(lista);
+        lista.adicionaNoComeço("Felicity");
+        System.out.println(lista);
+        
+        String nome = "Pedro";
+        lista.adicionaNoComeço(nome);
+        System.out.println(lista);
+        
+        int numero = 42;
+        lista.adicionaNoComeço(numero);
+        System.out.println(lista);
+        
+        Cliente cli1 = new Cliente(34, "Juliana Paes", "Rua 3");
+        lista.adicionaNoComeço(cli1);
+        System.out.println(lista);
     }
 }
 
-//Parei às 21:11
+/*
+
+Parei com 35:52
+
+*/
