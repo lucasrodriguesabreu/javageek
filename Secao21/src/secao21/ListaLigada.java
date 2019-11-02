@@ -5,14 +5,34 @@ public class ListaLigada {
     private Celula ultima = null;
     private int total = 0;
     
+    /**
+     * Método que adiciona um objeto no começo da lista
+     * @param elemento 
+     */
+    
     public void adicionaNoComeço(Object elemento){
         //[42] [56]-> null
         Celula nova = new Celula(elemento, this.primeira);
         this.primeira = nova;
+        if(this.total == 0){
+            this.ultima = this.primeira;
+        }
+        
         this.total = this.total + 1;
         //TODO
     }
+    /**
+     * Método que adiciona um objeto no final da lista
+     * @param elemento 
+     */
     public void adiciona(Object elemento){
+        if(this.total == 0){
+            adicionaNo
+        }
+        Celula nova = new Celula(elemento, null);
+        this.ultima.setProximo(nova);
+        this.ultima = nova;
+        this.total = this.total + 1;
         //TODO
     }
     /*public adiciona(int posicao, Object elemento){
