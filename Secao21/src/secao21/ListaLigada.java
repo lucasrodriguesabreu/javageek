@@ -25,18 +25,35 @@ public class ListaLigada {
      * Método que adiciona um objeto no final da lista
      * @param elemento 
      */
+    /**
+     * Método que adiciona um elemento no meio da lista,
+     * de acordo com a posição.
+     * 
+     * @param elemento 
+     */
     public void adiciona(Object elemento){
         if(this.total == 0){
-            adicionaNo
-        }
+            this.adicionaNoComeço(elemento);
+        }else{
         Celula nova = new Celula(elemento, null);
         this.ultima.setProximo(nova);
         this.ultima = nova;
         this.total = this.total + 1;
         //TODO
     }
+    }
     /*public adiciona(int posicao, Object elemento){
+        if(posicao == 0){
+            this.adicionaNoComeço(elemento);
+        }else if(posicao ==this.total){
+            this.adiciona(elemento);
+        }else{
+        Celula anterior = this.pegaCelula(posicao - 1);
+        Celula nova = new Celula(elemento, anterior.getProximo());
+        anterior.setProximo(nova);
+        this.total = this.total + 1;
         //TODO
+        }
     }*/
     public Object pega(int posicao){
         //TODO
@@ -57,7 +74,7 @@ public class ListaLigada {
         if(total == 0){
             return null;
         }
-    }
+    
     Celula atual = primeira;    
     StringBuilder builder = new StringBuilder("[");
     
@@ -68,5 +85,20 @@ public class ListaLigada {
     atual = atual.getProximo();
     }
     builder.append("]");
-    return builder.toString()
+    return builder.toString();
+    }
+    private boolean posicaoOcupada(int posicao){
+        return posicao >= 0 && posicao < this.total;
+    }
+    private Celula pegaCelula(int posicao){
+        if(!posicaoOcupada(posicao)){
+            throw new IllegalArgumentException("Posição inexistente!");
+        }
+        Celula atual = this.primeira;
+        
+        /*for(int = 0; i < posicao; i++){
+        atual = atual.getProximo();
+        }*/
+        return atual;
+    }
 }
