@@ -13,23 +13,23 @@ public class Programa57 {
         ListaLigada lista = new ListaLigada();
         
         System.out.println(lista);
-        lista.adicionaNoComeço("Maria");
+        lista.adicionaNoComeco("Maria");
         System.out.println(lista);
-        lista.adicionaNoComeço("Angelina");
+        lista.adicionaNoComeco("Angelina");
         System.out.println(lista);
-        lista.adicionaNoComeço("Felicity");
+        lista.adicionaNoComeco("Felicity");
         System.out.println(lista);
         
         String nome = "Pedro";
-        lista.adicionaNoComeço(nome);
+        lista.adicionaNoComeco(nome);
         System.out.println(lista);
         
         int numero = 42;
-        lista.adicionaNoComeço(numero);
+        lista.adicionaNoComeco(numero);
         System.out.println(lista);
         
         Cliente cli1 = new Cliente(34, "Juliana Paes", "Rua 3");
-        lista.adicionaNoComeço(cli1);
+        lista.adicionaNoComeco(cli1);
         System.out.println(lista);
     }
 }
